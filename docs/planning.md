@@ -39,4 +39,4 @@ Technical issues: There will be challenges with coding.
 .Conducting testing and debugging to ensure the app functions properly.
 
 
-![Insert your Context Diagram Here](images/context.png)
+![Insert your Context Diagram Here](images/ContextDiagram.png)
