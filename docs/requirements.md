@@ -40,17 +40,17 @@ TODO: Describe each use case (at least one per team member).
 | **Issues** | Issue around finding optimal cycle paths - potentially use a shortest path algorithm such as A-star algorithm |
 
 
-// Joe: Yoshan you need to do this table, because the document says each team member should do one use case //
+ 
  
 | UC2 | View cycle routes on the map | 
 | -------------------------------------- | ------------------- |
-| **Description** | TODO: Goal to be achieved by use case and sources for requirement |
-| **Actors** | TODO: List of actors involved in use case |
-| **Assumptions** | TODO: Pre/post-conditions if any</td></tr>
-| **Steps** | TODO: Interactions between actors and system necessary to achieve goal |
-| **Variations** | TODO: OPTIONAL - Any variations in the steps of a use case |
-| **Non-functional** | TODO: OPTIONAL - List of non-functional requirements that the use case must meet. |
-| **Issues** | TODO: OPTIONAL - List of issues that remain to be resolved |
+| **Description** |  Allows the user to view generated cycle routes visually on an interactive map.
+| **Actors** |  Hobbyist cyclists, Dog walkers, Parents, Cyclists for work/school.
+| **Assumptions** | The map service (e.g., Google Maps or OpenStreetMap) and the OpenData API are accessible and integrated into the web app to display the routes.
+| **Steps** | The user selects a generated route or a set of routes they wish to view.The web app displays the selected route(s) on the map, highlighting the path, start, and end points.The user can zoom in/out or pan to explore the route on the map.Additional information, such as distance, estimated time, or route difficulty, is displayed alongside the map for reference.
+| **Variations** | If no routes are available in the selected area, the map will indicate this to the user.Users can choose between different map views, such as satellite, terrain, or street view, if supported by the map service.
+| **Non-functional** | The map and routes should load quickly and be interactive, providing smooth zoom and pan functionality. The route lines and markers should be clear and distinguishable, even in areas with complex paths.
+| **Issues** | Potential challenges with route rendering on the map if there are too many overlapping or complex routes. Ensuring map interactivity and responsiveness on various devices, particularly mobile.
 
 TODO: Your Use-Case diagram should include all use-cases.
 
