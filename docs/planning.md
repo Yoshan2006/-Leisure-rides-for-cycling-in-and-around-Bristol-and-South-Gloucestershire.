@@ -22,12 +22,19 @@ Technical issues: There will be challenges with coding.
 
 ## Project Scope
 .Connecting to the Bristol Open Data API.
+
 .Displaying cycling routes with distance and difficulty levels.
+
 .Designing the user interface for the web app.
+
 .Developing the app using JavaScript, HTML5, and CSS3.
+
 .Setting up a system to filter cycling routes based on user prefereProblem statement
+
 .Accepting user inputs to generate custom cycling routes.
+
 .Maintaining and updating the code/documentation in the GitHub repository.
+
 .Conducting testing and debugging to ensure the app functions properly.
 
 
