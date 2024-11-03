@@ -25,9 +25,7 @@ This webapp would benefit parents by giving them access to the safest and most p
 routes that their children can take to school.
 
 ### Use Cases
-TODO: Describe each use case (at least one per team member).
-    Give each use case a unique ID, e.g. UC1, UC2, ...
-    Summarise these using the use-case template below.
+ 
 
 | UC1 | Generate Cycle Routes |
 | -------------------------------------- | ------------------- |
