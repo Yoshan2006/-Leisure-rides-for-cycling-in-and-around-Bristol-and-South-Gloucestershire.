@@ -18,7 +18,7 @@ Google Maps (Cycling Mode): Google map is the most popular in the world and it o
 ### Expected Risks
 Inaccurate Data: Inaccurate or outdated data of the routes.
 
-Data Accessibility: If the Bristol Open Data API is not available or the data is outdated, this app could not work as expected.
+Data Accessibility: If the Bristol Open Data API is not available, this app could not work as expected.
 
 Technical issues: It may be challenging using the required APIs in such a complex way, given that we have not used before.
 
