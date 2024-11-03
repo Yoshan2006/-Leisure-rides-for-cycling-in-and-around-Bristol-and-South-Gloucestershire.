@@ -34,9 +34,9 @@ TODO: Describe each use case (at least one per team member).
 | **Description** | Allows the user to generate different cycle routes to a destination. |
 | **Actors** | Hobbyist cyclists, Dog walkers, Parents, Cyclists work / school. |
 | **Assumptions** | We have enough resources using the OpenData and Google Maps APIs to generate optimal routes. |
-| **Steps** | User should input a start place and destination, and the webapp will receive cycle routes between these areas using the OpenData API. |
-| **Variations** | Occasionally, there will be no cycle paths in some areas. The user will be alerted of this. |
-| **Non-functional** | System should be fast and develop genuinely optimal or close-to-optimal cycle routes with the data provided. |
+| **Steps** | User should input a start place and destination, and the webapp will receive cycle routes between these areas using the OpenData API and turn it into one consecutive route. |
+| **Variations** | Occasionally, there will be no cycle paths in some areas. The user will be alerted of this, and the path will be split in the area where there are no cycle paths. |
+| **Non-functional** | System should be fast and develop genuinely optimal or heuristic, close-to-optimal cycle routes with the data provided. |
 | **Issues** | Issue around finding optimal cycle paths - potentially use a shortest path algorithm such as A-star algorithm |
 
 
@@ -52,20 +52,20 @@ TODO: Describe each use case (at least one per team member).
 | **Non-functional** | The map and routes should load quickly and be interactive, providing smooth zoom and pan functionality. The route lines and markers should be clear and distinguishable, even in areas with complex paths.
 | **Issues** | Potential challenges with route rendering on the map if there are too many overlapping or complex routes. Ensuring map interactivity and responsiveness on various devices, particularly mobile.
 
-TODO: Your Use-Case diagram should include all use-cases.
+### Use Case Diagram
 
 ![Insert your Use-Case Diagram Here](images/UseCaseDiagram.png)
 
 ## Software Requirements Specification
 ### Functional requirements
-TODO: create a list of functional requirements. 
-    e.g. "The system shall ..."
-    Give each functional requirement a unique ID. e.g. FR1, FR2, ...
-    Indicate which UC the requirement comes from.
-
+Functional requirement:
+- FR1: The system shall allow the user to generate a cycle route between two places and display it on a map (UC1)
+- FR2: The system shall let the user to view existing cycle paths (UC2)
+- FR3: The system shall display information about pre-existing routes such as the estimated time, difficulty and distance alongside the route (UC2) 
 
 ### Non-Functional Requirements
-TODO: Consider one or more [quality attributes](https://en.wikipedia.org/wiki/ISO/IEC_9126) to suggest a small number of non-functional requirements.
-Give each non-functional requirement a unique ID. e.g. NFR1, NFR2, ...
-
-Indicate which UC the requirement comes from.
+- NFR1: The system should generate optimal paths (UC1)
+- NFR2: The system should be able to quickly generate paths (UC1)
+- NFR3: The system should load routes and the map quickly to the page (UC2)
+- NFR4: The system should have a responsive and smooth map interaction (UC2)
+- NFR5: The system should have a map with clear and distinguishable paths (UC2)
