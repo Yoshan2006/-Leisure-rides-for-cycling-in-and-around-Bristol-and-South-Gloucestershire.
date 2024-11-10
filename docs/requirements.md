@@ -60,7 +60,7 @@ Add your robustness diagram here Mihiranga
 
 ## Robustness Diagram UC2
 
-![RD2](images/RobustnessDiagram1.png)
+![RD2](images/RobustnessDiagram2.png)
 
 ## Software Requirements Specification
 ### Functional requirements
