@@ -52,7 +52,15 @@ routes that their children can take to school.
 
 ## Use Case Diagram
 
-![Insert your Use-Case Diagram Here](images/UseCaseDiagram.png)
+(images/UseCaseDiagram.png)
+
+## Robustness Diagram UC1
+
+Add your robustness diagram here Mihiranga
+
+## Robustness Diagram UC2
+
+(images/RobustnessDiagram1.png)
 
 ## Software Requirements Specification
 ### Functional requirements
