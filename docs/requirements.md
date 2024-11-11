@@ -77,3 +77,4 @@ Functional requirement:
 - NFR5: The system should load routes to the page in under 4 seconds (UC2)
 - NFR6: The system should have an instantly responsive and map interaction (UC2)
 - NFR7: The system should have a map with clear and distinguishable paths (UC2)
+- NFR8: The system should support a range of mobile devices from screen widths 360px to 1920px (UC2, UC1)
