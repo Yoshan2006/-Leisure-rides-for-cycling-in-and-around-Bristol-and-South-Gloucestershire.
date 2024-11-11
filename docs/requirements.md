@@ -76,7 +76,7 @@ Functional requirement:
 - NFR3: The system should generate a route that includes walking if there are no cycle routes between routes **(edge case)**
 - NFR4: The system should load the map to the page in under 2 seconds
 - NFR5: The system should load routes to the page in under 4 seconds
-- NFR6: The system should have an instantly responsive and map interaction
+- NFR6: The system should have an instantly responsive map interaction
 - NFR7: The system should have a map with clear and distinguishable paths
 - NFR8: The system should support a range of mobile devices from screen widths 360px to 1920px **(edge case)**
 - NFR9: The system should display an error if it is unable to connect to Bristol OpenData **(boundary case)**
