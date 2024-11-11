@@ -81,4 +81,4 @@ Functional requirement:
 - NFR8: The system should support a range of mobile devices from screen widths 360px to 1920px **(edge case)**
 - NFR9: The system should display an error if it is unable to connect to Bristol OpenData **(boundary case)**
 - NFR10: The system should display an error if it is unable to connect to GoogleMaps API **(boundary case)**
-- NFR11: The site should have options for high contrast and larger text for better visibility.
+- NFR11: The site should have options for high contrast and larger text for better visibility.**(edge case)**
