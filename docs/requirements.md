@@ -56,7 +56,7 @@ routes that their children can take to school.
 
 ## Robustness Diagram UC1
 
-
+![RD2](images/RobustnessDiagram1.png)
 
 ## Robustness Diagram UC2
 
