@@ -71,13 +71,13 @@ Functional requirement:
 - FR4: The system shall display information about pre-existing routes such as the estimated time, difficulty and distance alongside the route (UC2) 
 
 ### Non-Functional Requirements
-- NFR1: The system should generate optimal paths (at minimum top-5 quickest) (UC1)
-- NFR2: The system should be able to generate paths in under 5 seconds (UC1)
-- NFR3: The system should generate a route that includes walking if there are no cycle routes between routes (UC1) **(edge case)**
-- NFR4: The system should load the map to the page in under 2 seconds (UC2)
-- NFR5: The system should load routes to the page in under 4 seconds (UC2)
-- NFR6: The system should have an instantly responsive and map interaction (UC2)
-- NFR7: The system should have a map with clear and distinguishable paths (UC2)
-- NFR8: The system should support a range of mobile devices from screen widths 360px to 1920px (UC1, UC2) **(edge case)**
-- NFR9: The system should display an error if it is unable to connect to Bristol OpenData (UC1, UC2) **(boundary case)**
-- NFR10: The system should display an error if it is unable to connect to GoogleMaps API (UC2) **(boundary case)**
+- NFR1: The system should generate optimal paths (at minimum top-5 quickest)
+- NFR2: The system should be able to generate paths in under 5 seconds
+- NFR3: The system should generate a route that includes walking if there are no cycle routes between routes **(edge case)**
+- NFR4: The system should load the map to the page in under 2 seconds
+- NFR5: The system should load routes to the page in under 4 seconds
+- NFR6: The system should have an instantly responsive and map interaction
+- NFR7: The system should have a map with clear and distinguishable paths
+- NFR8: The system should support a range of mobile devices from screen widths 360px to 1920px **(edge case)**
+- NFR9: The system should display an error if it is unable to connect to Bristol OpenData **(boundary case)**
+- NFR10: The system should display an error if it is unable to connect to GoogleMaps API **(boundary case)**
