@@ -72,7 +72,8 @@ Functional requirement:
 ### Non-Functional Requirements
 - NFR1: The system should generate optimal paths (at minimum top-5 quickest) (UC1)
 - NFR2: The system should be able to generate paths in under 5 seconds (UC1)
-- NFR3: The system should load the map to the page in under 2 seconds (UC2)
-- NFR4: The system should load routes to the page in under 4 seconds (UC2)
-- NFR4: The system should have an instantly responsive and map interaction (UC2)
-- NFR5: The system should have a map with clear and distinguishable paths (UC2)
+- NFR3: The system should generate a route that includes walking if there are no cycle routes between routes (UC1) **edge case**
+- NFR4: The system should load the map to the page in under 2 seconds (UC2)
+- NFR5: The system should load routes to the page in under 4 seconds (UC2)
+- NFR6: The system should have an instantly responsive and map interaction (UC2)
+- NFR7: The system should have a map with clear and distinguishable paths (UC2)
