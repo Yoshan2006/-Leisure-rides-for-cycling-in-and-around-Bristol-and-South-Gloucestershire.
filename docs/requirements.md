@@ -70,8 +70,9 @@ Functional requirement:
 - FR3: The system shall display information about pre-existing routes such as the estimated time, difficulty and distance alongside the route (UC2) 
 
 ### Non-Functional Requirements
-- NFR1: The system should generate optimal paths (UC1)
-- NFR2: The system should be able to quickly generate paths (UC1)
-- NFR3: The system should load routes and the map quickly to the page (UC2)
-- NFR4: The system should have a responsive and smooth map interaction (UC2)
+- NFR1: The system should generate optimal paths (at minimum top-5 quickest) (UC1)
+- NFR2: The system should be able to generate paths in under 5 seconds (UC1)
+- NFR3: The system should load the map to the page in under 2 seconds (UC2)
+- NFR4: The system should load routes to the page in under 4 seconds (UC2)
+- NFR4: The system should have an instantly responsive and map interaction (UC2)
 - NFR5: The system should have a map with clear and distinguishable paths (UC2)
