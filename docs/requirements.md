@@ -56,7 +56,7 @@ routes that their children can take to school.
 
 ## Robustness Diagram UC1
 
-![RD2](images/RobustnessDiagram1.png)
+![RD1](images/RobustnessDiagram1.png)
 
 ## Robustness Diagram UC2
 
@@ -67,14 +67,17 @@ routes that their children can take to school.
 Functional requirement:
 - FR1: The system shall allow the user to generate a cycle route between two places and display it on a map (UC1)
 - FR2: The system shall let the user to view existing cycle paths (UC2)
-- FR3: The system shall display information about pre-existing routes such as the estimated time, difficulty and distance alongside the route (UC2) 
+- FR3: The system shall display information about generated routes such as the estimated time, distance, and other possible data with the information given (UC1)
+- FR4: The system shall display information about pre-existing routes such as the estimated time, difficulty and distance alongside the route (UC2) 
 
 ### Non-Functional Requirements
 - NFR1: The system should generate optimal paths (at minimum top-5 quickest) (UC1)
 - NFR2: The system should be able to generate paths in under 5 seconds (UC1)
-- NFR3: The system should generate a route that includes walking if there are no cycle routes between routes (UC1) **edge case**
+- NFR3: The system should generate a route that includes walking if there are no cycle routes between routes (UC1) **(edge case)**
 - NFR4: The system should load the map to the page in under 2 seconds (UC2)
 - NFR5: The system should load routes to the page in under 4 seconds (UC2)
 - NFR6: The system should have an instantly responsive and map interaction (UC2)
 - NFR7: The system should have a map with clear and distinguishable paths (UC2)
-- NFR8: The system should support a range of mobile devices from screen widths 360px to 1920px (UC2, UC1)
+- NFR8: The system should support a range of mobile devices from screen widths 360px to 1920px (UC1, UC2) **(edge case)**
+- NFR9: The system should display an error if it is unable to connect to Bristol OpenData (UC1, UC2) **(boundary case)**
+- NFR10: The system should display an error if it is unable to connect to GoogleMaps API (UC2) **(boundary case)**
