@@ -4,12 +4,11 @@
     closestVertex:
     parameters:
     - startPos : object [LatLngLiteral] (contains lat and lng properties representing a coordinate position of the starting point)
-    - routeArray : Array (contains an array of route instances to be searched for the closest vertex to the starting position)
 */
-function closestVertex(startPos, routeArray) {
+function closestVertex(startPos) {
     let closest;
     let route;
-    for (route of routeArray) {
+    for (route of mainRouteList) {
         if (route.type === "LineString") {
             for (let vertex of route.paths[0]) {
                 if (!closest) {
