@@ -1,0 +1,78 @@
+body {
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: bold;
+    font-size: large;
+    background: #000000;
+    color: #FFFFFF;
+}
+
+.help-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+header {
+    background: #4dbf04;
+    color: black;
+    padding: 30px;
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+header p {
+    margin-top: 10px;
+    font-size: 1.1rem;
+}
+
+.faq-section {
+    background: #000000;
+    padding: 20px;
+    border-radius: 8px;
+    border: 3px solid #4dbf04;
+    margin-bottom: 20px;
+}
+
+.faq h3 {
+    color: #4dbf04;
+    margin: 10px 0;
+}
+
+.faq p {
+    margin: 0 0 15px;
+}
+
+.back-section {
+    background: black;
+    padding: 20px;
+    border-radius: 8px;
+    border: 3px solid #4dbf04;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.back-button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 20px;
+    background: #000000;
+    color: #4dbf04;
+    text-decoration: none;
+    border-radius: 5px;
+    border: 3px solid #4dbf04;
+    font-size: 1rem;
+    transition: 0.2s;
+}
+
+.back-button:hover {
+    border-color: #5ecf15;
+    color: #5ecf15;
+}

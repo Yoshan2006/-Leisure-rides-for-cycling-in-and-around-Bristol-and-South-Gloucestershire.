@@ -28,6 +28,7 @@ routes that their children can take to school, picking the ones with the least d
 ### Use Cases
  
 
+(Joe's use case)
 | UC1 | Generate Cycle Routes |
 | -------------------------------------- | ------------------- |
 | **Description** | Allows the user to generate different cycle routes to a destination. |
@@ -41,6 +42,7 @@ routes that their children can take to school, picking the ones with the least d
 
  
  
+(Mihiranga's ues case)
 | UC2 | View cycle routes on the map | 
 | -------------------------------------- | ------------------- |
 | **Description** |  Allows the user to view generated cycle routes visually on an interactive map.
@@ -66,17 +68,18 @@ routes that their children can take to school, picking the ones with the least d
 ## Software Requirements Specification
 ### Functional requirements
 Functional requirement:
-- FR1: The system shall allow the user to generate a cycle route between two places and display it on a map (UC1)
-- FR2: The system shall display information about generated routes such as the estimated time, distance, and other possible data with the information given (UC1)
-- FR3: The system shall let the user to view existing cycle paths (UC2)
-- FR4: The system shall display information about pre-existing routes such as the estimated time, difficulty and distance (UC2) 
+- FR1: The system shall allow the user to generate a cycle route between two places
+and display it on a map (UC1)
+- FR2: The system shall let the user view existing cycle paths on a map (UC2)
+- FR3: The system shall display information about existing cycle paths when clicked,
+specifically the name, description, distance, time-to-complete, the difficulty and the colour code. (UC2)
 
 ### Non-Functional Requirements
-- NFR1: The system should generate optimal paths (at minimum top-5 quickest)
-- NFR2: The system should be able to generate paths in under 5 seconds
-- NFR3: The system should load the map to the page in under 2 seconds
-- NFR4: The system should load routes to the page in under 4 seconds
-- NFR5: The system should have an instantly responsive map interaction
+- NFR1: The system should load the map to the page in under 2 seconds
+- NFR2: The system should have an instantly responsive map interaction
+- NFR3: The system should load routes to the page in under 1 seconds after the map loads
+- NFR4: The system should be able to generate paths in under 3 seconds
+- NFR5: The system should generate optimal paths (at minimum top-3 quickest)
 - NFR6: The system should have a map with clear and distinguishable paths
 - NFR7: The system should display an error if it is unable to connect to Bristol OpenData **(boundary case)**
 - NFR8: The system should display an error if it is unable to connect to GoogleMaps API **(boundary case)**

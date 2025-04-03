@@ -90,12 +90,12 @@ If a route is unable to be loaded due to there not being a direct path between t
 
 ## Open Help Page
 
-![unsuccessful_route_img](images/design-wireframes/WFOpenHelpPage.png)
+![help_page_img](images/design-wireframes/WFOpenHelpPage.png)
 
 Clicking the question mark in the top right corner will send the user to a help page, which displays some basic "FAQs" which serve to help the user in case they do not understand the program or its usage.
 
 ## Back to Main Page
 
-![unsuccessful_route_img](images/design-wireframes/WFBackToMain.png)
+![back_to_main_img](images/design-wireframes/WFBackToMain.png)
 
 You can return to the main page simply by pressing the back button on the help menu. It is clearly labelled with its own UI panel so that users do not get lost.

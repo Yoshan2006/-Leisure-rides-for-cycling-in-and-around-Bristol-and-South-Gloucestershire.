@@ -1,0 +1,338 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', serif;
+}
+
+/* navbar styles */
+
+.navbar{
+    width: 100%;
+    height: 10vh;
+    background-color: black;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+.navbar > * {
+    margin: 20px;
+}
+
+h1.logo {
+    font-family: "Sans", serif;
+    font-size: 3rem;
+    color: #4dbf04;
+}
+
+@keyframes logo-shift-right {
+    from { transform: translate(0); }
+    to { transform: translate(20vw, 0); }
+}
+
+@keyframes logo-shift-left {
+    from { transform: translate(20vw, 0); }
+    to { transform: translate(0); }
+}
+
+a.help {
+    width: fit-content;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* main body styles */
+
+.main-body {
+    height: 90vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#map {
+    width: 100%;
+    height: 100%;
+}
+
+/* sidebar styles */
+
+.start-marker-img {
+	width: 40px;
+	height: 40px;
+	filter: invert(24%) sepia(63%) saturate(7457%) hue-rotate(354deg) brightness(92%) contrast(124%);
+}
+
+.end-marker-img {
+	width: 40px;
+	height: 40px;
+	filter: invert(55%) sepia(30%) saturate(3562%) hue-rotate(81deg) brightness(114%) contrast(128%);
+}
+
+.left-sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    position: absolute;
+    left: -20vw;
+    top: 0;
+
+    height: 100vh;
+    width: 20vw;
+    background: black;
+}
+
+@keyframes left-sidebar-open {
+    from {left: -20vw;}
+    to {left: 0;}
+}
+
+@keyframes left-sidebar-close {
+    from {left: 0;}
+    to {left: -20vw;}
+}
+
+/* give all direct children of the sidebar a margin
+ * so they do not clash with the edge of the sidebar*/
+.left-sidebar > * { margin: 40px; }
+
+/* make the sidebar divisions act like individual items */
+.left-sidebar > div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Create a slight margin between elements within a sidebar division */
+.left-sidebar > div > * { margin: 20px; }
+
+.left-sidebar > h1 {
+    text-align: center;
+    font-size: 3rem;
+    font-family: 'Sans', serif;
+    font-weight: bold;
+    color: #4dbf04;
+}
+
+/* Have span behaviour within a position absolute parent 
+ * (re-created using flexbox) */
+.left-sidebar > div > span {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.left-sidebar > div > span > button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 35px;
+    border: 3px solid #4dbf04;
+    background: black;
+
+    transition: background 0.2s ease-out;
+    transition: border-color 0.2s ease-out;
+}
+
+.left-sidebar > div > span > button:hover {
+    background: #222222; 
+    border-color: 3px solid #5ecf15;
+}
+
+.left-sidebar > div > span > button:active {
+    background: #444444; 
+    border-color: #6fef26;
+}
+
+.left-sidebar > div > span > p {
+    color: white;
+    font-family: 'Roboto';
+    font-size: 1.5rem;
+}
+
+.sidebar-button {
+    background: black;
+    color: #4dbf04;
+    border: 2px solid #4dbf04;
+    border-radius: 10px;
+
+    font-family: 'Roboto';
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px 20px;
+}
+
+.sidebar-button:hover {
+    color: #5ecf15;
+    border-color: #5ecf15;
+}
+.sidebar-button:active {
+    color: #6fef26;
+    border-color: #6fef26;
+}
+
+/* right sidebar */
+
+.right-sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    position: absolute;
+    top: -100vh;
+    right: 0;
+
+    height: 100vh;
+    width: 20vw;
+    background: black;
+}
+
+@keyframes right-sidebar-open {
+    from { top: -100vh; }
+    to { top: 0; }
+}
+
+@keyframes right-sidebar-close {
+    from { top: 0; }
+    to { top: -100vh; }
+}
+
+.right-sidebar > * { margin: 30px; }
+
+.right-sidebar > h1 {
+    text-align: center;
+    font-size: 3rem;
+    font-family: 'Sans', serif;
+    font-weight: bold;
+    color: #4dbf04;
+}
+
+.right-sidebar > div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.right-sidebar > div > * { margin: 10px; }
+
+.right-sidebar > div > span {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.right-sidebar > div > p, .right-sidebar > div > span > p {
+    color: white;
+    font-family: 'Roboto';
+    font-size: 1.5rem;
+}
+
+.generate-route-btn {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    padding: 20px 42px;
+
+    font-size: 1.75rem;
+    font-family: 'Segoe UI';
+    font-weight: bold;
+
+    background: black;
+    color: #4dbf04;
+
+    border: none;
+    border-radius: 10px;
+
+    cursor: pointer;
+    transition: color 0.2s;
+    transition: bottom 0.1s ease-out;
+}
+
+/* Change text color and raise button when hovering over it*/
+.generate-route-btn:hover {
+    color: #5ecf15; 
+    bottom: 25px;
+}
+/* Change text color further when clicking it*/
+.generate-route-btn:active { color: #6fef26; }
+
+@keyframes hide-button {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+@keyframes show-button {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Warning message styles */
+
+.warn-panel {
+    position: absolute;
+    left: calc(50vw - 15%); /* Centered (left position - half of width) */
+    bottom: 20px;
+    
+    width: 30%;
+    height: 22%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background: black;
+    border-radius: 10px;
+}
+
+.warn-panel > h1 {
+    font-size: 2rem;
+    font-family: 'Roboto';
+    font-weight: bold;
+    color: #4dbf04;
+}
+
+.warn-panel > p {
+    text-align: center;
+    font-size: 1rem;
+    font-family: 'Roboto';
+    font-weight: bold;
+    color: white;
+}
+
+.warn-panel > button {
+    background: black;
+    color: #4dbf04;
+    border: 2px solid #4dbf04;
+    border-radius: 10px;
+
+    font-family: 'Roboto';
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px 20px;
+}
+
+.warn-panel > button:hover {
+    color: #5ecf15;
+    border-color: #5ecf15;
+}
+.warn-panel > button:active {
+    color: #6fef26;
+    border-color: #6fef26;
+}

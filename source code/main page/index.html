@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- meta tags + tab title -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bristol Cycle Routes</title>
+
+        <!-- stylesheets -->
+        <link rel="stylesheet" href="styles.css">
+
+        <!-- =========scripts========= -->
+		<!-- MapsAPI scripts -->
+		<script src="scripts/mapsAPI/drawPolylines.js"></script>
+		<script src="scripts/mapsAPI/markers.js"></script>
+
+		<!-- routes -->
+		<script src="scripts/Routes/route.js"></script>
+		<script src="scripts/Routes/customRoute.js"></script>
+		<script src="scripts/Routes/mainRoutes.js"></script>
+		<script src="scripts/Routes/routeMarkers.js"></script>
+
+		<!-- route generation -->
+		<script src="scripts/Routes/Route Generation/closestVertex.js"></script>
+		<script src="scripts/Routes/Route Generation/latlngOffsetToKm.js"></script>
+		<script src="scripts/Routes/Route Generation/generateRoute.js"></script>
+		<script src="scripts/Routes/Route Generation/getNodes.js"></script>
+
+		<!-- data structures -->
+		<script src="scripts/Data Structures/rect.js"></script>
+		<script src="scripts/Data Structures/graph.js"></script>
+		<script src="scripts/Data Structures/quadtree.js"></script>
+
+		<!-- algorithms -->
+		<script src="scripts/Algorithms/dijkstra.js"></script>
+
+		<!-- UI functions -->
+        <script src="scripts/UI/leftSidebar.js"></script>
+        <script src="scripts/UI/rightSidebar.js"></script>
+        <script src="scripts/UI/warning.js"></script>
+
+		<!-- API main files -->
+		<script src="scripts/mapsAPI/mapsAPI.js"></script>
+		<script src="scripts/cycleAPI/cycleAPI.js"></script>
+
+		<script src="index.js"></script>
+    </head>
+    <body>
+        <!-- navbar -->
+        <div class="navbar">
+            <h1 id="logo" class="logo">Bristol Cycle Routes</h1>
+            <a href="../help page/help.html" class="help"><img src="img/help_icon.png" style="width: 3rem; height: 3rem;"alt="Help Page"></a>
+        </div>
+
+        <!-- main body -->
+        <div class="main-body">
+            <div id="map"></div>
+        </div>
+
+        <!-- sidebars -->
+        <button id="generate" class="generate-route-btn" onclick="transitionLeftSidebar('open')">GENERATE</button>
+
+        <div id="left" class="left-sidebar">
+            <h1>Generate Route</h1>
+            <div>
+                <span>
+                    <p>Set start:</p>
+                    <button><img onclick="activateStartMarkerMode()" class="start-marker-img" src="img/marker_icon.png"alt="start"></button>
+                </span>
+                <span>
+                    <p>Set destination:</p>
+                    <button><img onclick="activateEndMarkerMode()" class="end-marker-img" src="img/marker_icon.png" alt="destination"></button>
+                </span>
+            </div>
+            <div>
+            <button class="sidebar-button" onclick="startRouteGen();">Generate</button>
+            <button class="sidebar-button" onclick="transitionLeftSidebar('close'); deactiveMarkerMode(); clearRouteMarkers();">Back</button>
+            </div>
+        </div>
+
+        <div id="right" class="right-sidebar">
+            <h1>View Route</h1>
+            <!-- div edited dynamically -->
+            <div id="right-name-desc"></div>
+            <!-- div edited dynamically -->
+            <div id="right-info"></div>
+            <button class="sidebar-button" onclick="transitionRightSidebar('close')">Close</button>
+        </div>
+    </body>
+</html>

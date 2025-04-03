@@ -146,32 +146,164 @@ positions, which are used by the google maps API, into the distance between them
 generateRoute.js is inside of the Route Generation submodule, and contains two functions. One of the functions acts as the entry point, by checking that
 the user-placed markers are valid (have been placed to begin with). If this is valid, the other method is called, which begins route generation. The route generation
 algorithm works by finding the nearest vertex to the start and end markers. The routes are then converted to a large graph of connected edges and the dijkstra
-is performed on this graph. Finally, the path is returned, if there is a valid path between them, and drawn to the screen using the customRoute class.
+is performed on this graph. Finally, the path is returned, if there is a valid path between them, and drawn to the screen via the customRoute class.
 
 ## Table of JSLint Warnings for each javascript file
 
-| JS File                        | JSLint Warnings     |  
+*Note that JSLint was configured to the browser environment, all global variables were entered and with settings to allow for loops, the "this" keyword and "complex arrow functions"*.
+
+| **JS File**                    | **JSLint Warnings** |  
 | ------------------------------ | ------------------- |
 | index.js                       |  0                  |
+| ------------------------------ | ------------------- |
 | leftSidebar.js                 |  0                  |
+| ------------------------------ | ------------------- |
 | rightSidebar.js                |  0                  |
+| ------------------------------ | ------------------- |
 | warning.js                     |  0                  |
-| cycleAPI.js                    |  0                  |
-| mapsAPI.js                     |  0                  |
+| ------------------------------ | ------------------- |
+| cycleAPI.js                    |  2                  |
+|                                |  "Expected ; and saw 'of'" at "for (feature of route.features) {" (25:18) |
+|                                |  "Line is longer than 80 characters" at "let url = (the fetch url)" (6:1) |
+| ------------------------------ | ------------------- |
+| mapsAPI.js                     |  2                  |
+|                                |  "Line is longer than 80 characters" at "scriptElement.src = (google maps api link)" (16:1) |
+|                                |  "Line is longer than 80 characters" at "googleMapsObject = new google.maps.Map(document.getElementById("map", mapProperties))" (53:1) |
+| ------------------------------ | ------------------- |
 | drawPolylines.js               |  0                  |
+| ------------------------------ | ------------------- |
 | markers.js                     |  0                  |
-| route.js                       |  0                  |
+| ------------------------------ | ------------------- |
+| route.js                       |  11                 |
+|                                |  "Expected ; and instead saw 'of'" at "for (path of routeDataJSON.route) {" (30:21) | 
+|                                |  "Expected ; and instead saw 'route'" at "class route {" (6:6) | 
+|                                |  "Expected ; and instead saw '{'" at "class route {" (6:12) | 
+|                                |  "Naked block" at "class route {" (6:13) | 
+|                                |  "Expected ; and instead saw '{'" at "constructor(routeDataJSON) {" (8:31) | 
+|                                |  "Naked block" at "constructor(routeDataJSON) {" (8:32) |
+|                                |  "Expected ; and instead saw 'this'" at "    }" (18:9) |
+|                                |  "Expected 'for' to be in a function" at "for (path of routeDataJSON.route" (30:13) | 
+|                                |  "Line is longer than 80 characters" at "this.highlights = []; //stores the higlights when a polyline is selected" (41:4) | 
+|                                |  "Line is longer than 80 characters" at "polyline.addListener("mouseover", function() { this.parent.highlight(); });" (50:1) |
+|                                |  "Line is longer than 80 characters" at "polyline.addListener("mouseout", function() { this.parent.unhighlight(); });" (51:1) |
+| ------------------------------ | ------------------- |
 | routeMarkers.js                |  0                  |
-| mainRoutes.js                  |  0                  |
-| customRoute.js                 |  0                  |
-| graph.js                       |  0                  |
-| rect.js                        |  0                  |
-| quadtree.js                    |  0                  |
-| dijkstra.js                    |  0                  |
-| closestVertex.js               |  0                  |
-| getNodes.js                    |  0                  |
-| latlngOffsetToKm.js            |  0                  |
-| generateRoute.js               |  0                  |
+| ------------------------------ | ------------------- |
+| mainRoutes.js                  |  1                  |
+|                                |  "Expected ; and instead saw 'of'" at "for (routex of routeArray) {" (6:17) | 
+| ------------------------------ | ------------------- |
+| customRoute.js                 |  11                 |
+|                                |  "Unexpected ')'" at "delete() {" (30:12) |
+|                                |  "Expected ; and instead saw 'customRoute'" at "class customRoute {" (6:6) |
+|                                |  "Expected ; and instead saw '{'" at "class customRoute {" (6:18) |
+|                                |  "Naked block" at "class customRoute {" (6:19) |
+|                                |  "Expected ; and instead saw '{'" at "constructor(path) {" (8:22) |
+|                                |  "Naked block" at "constructor(path) {" (8:23) |
+|                                |  "Line is longer than 80 characters" at "_setMarker(this.path\[this.path.length-1\], "intermediate");" (15:1) |
+|                                |  "Expected ; and instead saw '{'" at "hide() {" (18:11) |
+|                                |  "Naked Block" at "hide() {" (18:12) |
+|                                |  "Expected '; and instead saw {" at "show() {" (24:11) |
+|                                |  "Naked block" at "show() {" (24:21) |
+| ------------------------------ | ------------------- |
+| graph.js                       |  9                  |
+|                                |  "Unexpected expression 'class' in statement position" at "class graphNode {" (3:1) | 
+|                                |  "Expected ; and instead saw 'graphNode'" at "class graphNode {" (3:6) |
+|                                |  "Unexpected expression 'graphNode' in statement position" at "class graphNode {" (3:7) |
+|                                |  "Expected ; and instead saw '{'" at "class graphNode {" (3:16) |
+|                                |  "Naked block" at "class graphNode {" (3:17) |
+|                                |  "Expected ; and instead saw '{'" at "constructor(LatLngLiteral, route) {" (5:38) |
+|                                |  "Naked block" at "constructor(LatLngLiteral, route) {" (5:39) |
+|                                |  "Expected ; and instead saw '{'" at "addEdge(connectedNode) {" (14:27) |
+|                                |  "Naked block" at "addEdge(connectedNode) {" (14:28) |
+| ------------------------------ | ------------------- |
+| rect.js                        |  21                 |
+|                                |  "Unexpected expression 'class' in statement position" at "class latlngRect {" (3:1) |
+|                                |  "Expected ; and instead saw 'latlngRect'" at "class latlngRect {" (3:6) |
+|                                |  "Unexpected expression 'latlngRect' in statement position" at "class latlngRect {" (3:7) |
+|                                |  "Expected ; and instead saw '{'" at "class latlngRect {" (3:17) |
+|                                |  "Naked block" at "class latlngRect {" (3:18) |
+|                                |  "Expected ; and instead saw '{'" at "constructor(lat, lng, height, width) {" (5:41) |
+|                                |  "Naked block" at "constructor(lat, lng, height, width) {" (5:42) |
+|                                |  "Expected ; and instead saw '{'" at "contains(LatLngLiteral) {" (10:28) |
+|                                |  "Naked block" at "contains(LatLngLiteral) {" (10:29) |
+|                                |  "Expected 'return' to be in a function" at "    return {" (11:9) |
+|                                |  "Unreachable '{'" at "intersects(rect2) {" (19:15) |
+|                                |  "Expected ; and instead saw '{'" at "intersects(rect2) {" (19:22) |
+|                                |  "Naked block" at "intersects(rect2) {" (19:23) |
+|                                |  "Expected 'return' to be in a function" at "if (this.lat < rect2.lat - rect2.height) { return false; }" (20:52) |
+|                                |  "Expected 'return' to be in a function" at "if (this.lat - this.height > rect2.lat) { return false; }" (21:51) |
+|                                |  "Expected 'return' to be in a function" at "if (this.lng > rect2.lng + rect2.width) { return false; }" (22:51) |
+|                                |  "Expected 'return' to be in a function" at "if (this.lng + this.width < rect2.lng) { return false; }" (23:50) |
+|                                |  "Expected 'return' to be in a function" at "    return true;" (24:9) |
+|                                |  "Unreachable '{'" at "draw() {" (28:9) |
+|                                |  "Expected ; and instead saw '{'" at "draw() {" (28:11) |
+|                                |  "Naked block" at "draw() {" (28:12) |
+| ------------------------------ | ------------------- |
+| quadtree.js                    |  39                 |
+|                                |  "Unexpected expression 'class' in statement position" at "class quadTree {" (3:1) |
+|                                |  "Expected ; and instead saw 'quadTree'" at "class quadTree {" (3:6) |
+|                                |  "Unexpected expression 'quadTree' in statement position" at "class quadTree {" (3:7) |
+|                                |  "Expected ; and instead saw '{'" at "class quadTree {" (3:15) |
+|                                |  "Naked block" at "class quadTree {" (3:16) |
+|                                |  "Bad assignment to 'capacity'" at "constructor(boundary, capacity=4) {" (5:27) |
+|                                |  "Unexpected statement '=' in expression position" at "constructor(boundary, capacity=4) {" (5:35) |
+|                                |  "Expected ' and instead saw '{'" at "constructor(boundary, capacity=4) {" (5:38) |
+|                                |  "Naked block" at "constructor(boundary, capacity=4) {" (5:39) |
+|                                |  "Expected ; and instead saw '{'" at "subdivide() {" (13:16) |
+|                                |  "Naked block" at "subdivide() {" (13:17) |
+|                                |  "Line is longer than 80 characters" at "let topleftRegion = new latlngRect(this.boundary.lat, this.boundary.lng, this.boundary.height/2, this.boundary.width/2);" (14:1) |
+|                                |  "Unexpected 'new'" at "let topleftRegion = new latlngRect(this.boundary.lat, this.boundary.lng, this.boundary.height/2, this.boundary.width/2);" (14:29) |
+|                                |  "Line is longer than 80 characters" at "let bottomleftRegion = new latlngRect(this.boundary.lat-this.boundary.height/2, this.boundary.lng, this.boundary.height/2, this.boundary.width/2);" (15:1) |
+|                                |  "Unexpected 'new'" at "let bottomleftRegion = new latlngRect(this.boundary.lat-this.boundary.height/2, this.boundary.lng, this.boundary.height/2, this.boundary.width/2);" (15:32) |
+|                                |  "Line is longer than 80 characters" at "let bottomrightRegion = new latlngRect(this.boundary.lat-this.boundary.height/2, this.boundary.lng+this.boundary.width/2, this.boundary.height/2, this.boundary.width/2);" (16:1) |
+|                                |  "Unexpected 'new'" at "let bottomrightRegion = new latlngRect(this.boundary.lat-this.boundary.height/2, this.boundary.lng+this.boundary.width/2, this.boundary.height/2, this.boundary.width/2);" (16:33) |
+|                                |  "Line is longer than 80 characters" at "let toprightRegion = new latlngRect(this.boundary.lat, this.boundary.lng+this.boundary.width/2, this.boundary.height/2, this.boundary.width/2);" (17:1) |
+|                                |  "Unexpected 'new'" at "let toprightRegion = new latlngRect(this.boundary.lat, this.boundary.lng+this.boundary.width/2, this.boundary.height/2, this.boundary.width/2);" (17:30) |
+|                                |  "Unexpected 'new'" at "this.topleft = new quadTree(topleftRegion, this.capacity);" (19:24) |
+|                                |  "Unexpected 'new'" at "this.bottomleft = new quadTree(topleftRegion, this.capacity);" (20:27) |
+|                                |  "Unexpected 'new'" at "this.bottomright = new quadTree(topleftRegion, this.capacity);" (21:28) |
+|                                |  "Unexpected 'new'" at "this.topright = new quadTree(topleftRegion, this.capacity);" (22:25) |
+|                                |  "Expected ; and instead saw '{'" at "insertNode(node) {" (27:21) | 
+|                                |  "Naked block" at "insertNode(node) {" (27:22) | 
+|                                |  "Expected 'return' to be in a function" at "if (!this.boundary.contains(node.latlng)) {return;}" (28:52) |
+|                                |  "Expected === and instead saw ==" at "if (this.nodes.length === this.capacity" { this.subdivide(); }" (32:35) | 
+|                                |  "Expected ; and instead saw '{'" at "getNearbyNode(node, range) {" (41:32) | 
+|                                |  "Naked block" at "getNearbyNode(node, range) {" (41:33) | 
+|                                |  "Line is longer than 80 characters" at "range = new latlngRect(node.latlng.lat + range_height/2, node.latlng.lng - range_width/2, range_height, range_width);" (49:1) |
+|                                |  "Bad assignment to 'range'" at "range = new latlngRect(node.latlng.lat + range_height/2, node.latlng.lng - range_width/2, range_height, range_width);" (49:13) |
+|                                |  "Unexpected 'new'" at "range = new latlngRect(node.latlng.lat + range_height/2, node.latlng.lng - range_width/2, range_height, range_width);" (49:21) |
+|                                |  "Line is longer than 80 characters" at "found = found.concat(this.bottomleft.getNearbyNodes(node, range));" (58:1) |
+|                                |  "Line is longer than 80 characters" at "found = found.concat(this.bottomright.getNearbyNodes(node, range));" (59:1) |
+|                                |  "Expected 'return' to be in a function" at "    return found;" (63:9) | 
+|                                |  "Unreachable '{'" at "draw() {" (67:9) | 
+|                                |  "Expected ; and instead saw '{;" at "draw() {" (67:11) | 
+|                                |  "Naked block" at "draw() {" (67:12) | 
+| ------------------------------ | ------------------- |
+| dijkstra.js                    |  3                  |
+|                                |  "Unexpected 'let'" at "for (let i = 0; i < nextNodes.length; i++) {" (17:18) |
+|                                |  "Line is longer than 80 characters" at "if (!startNode || !endNode) { console.log("Warning: one or more nodes are null"); }" (6:1) |
+|                                |  "Line is longer than 80 characters" at "    let newDistance = currentNode.distance + currentNode.edges[i].weight;" (45:1) |
+| ------------------------------ | ------------------- |
+| closestVertex.js               |  1                  |
+|                                |  "Expected ; and instead saw 'of'" at "for (route of routeArray) {" (7:15) |
+| ------------------------------ | ------------------- |
+| getNodes.js                    |  6                  |
+|                                |  "Unexpected 'let'" at "for (let i = 0; i < mainRouteList.length; i++) {" (12:10) |
+|                                |  "Line is longer than 80 characters" at "    // declared here so that nodes between route are not treated as previous" (17:1) |
+|                                |  "Line is longer than 80 characters" at "    if (vertex.lat == startPos.lat && vertex.lng == startPos.lng) { startNode = node; }" (26:1) |
+|                                |  "Line is longer than 80 characters" at "    if (vertex.lat == endPos.lat && vertex.lng == endPos.lng) { endNode = node; }" (27:1) |
+|                                |  "Line is longer than 80 characters" at "    if (nearbyNode.route.type != "MultiLineString" && nearbyNode.route.id === node.route.id) { continue; }" (48:1) |
+|                                |  "Line is longer than 80 characters" at "    "if (latlngOffsetToKm(nearbyNode.latlng, node.latlng) < (node.route.type === "MultiLineString" ? validEdgeDistanceMultiLine : validEdgeDistance)) { (49:1) |
+| ------------------------------ | ------------------- |
+| latlngOffsetToKm.js            |  4                  |
+|                                |  "Expected one space between '=' and '2'" at "   2 * earthRadius *" (14:9) |
+|                                |  "Expected one space between '*' and 'Math'" at "Math.asin(Math.sqrt(Math.pow((Math.sin((lat2 - lat1) / 2)), 2) +" (15:9) |
+|                                |  "Expected one space between '+' and 'Math'" at "Math.cos(lat1) * Math.cos(lat2) *" (16:9) |
+|                                |  "Expected one space between '*' and 'Math'" at "Math.pow((Math.sin((lng2 - lng1) / 2)), 2)));" (17:9) |
+| ------------------------------ | ------------------- |
+| generateRoute.js               |  1                  |
+|                                |  "Expected ; and instead saw 'of'" at "for (node of shortestNodePath) {" (33:15) |
+| ------------------------------ | ------------------- |
 
 
 ## Software Architecture
@@ -189,4 +321,39 @@ subject to change, so this is sufficient for the program.
 ![UML Class Diagram](images/bristolOpenDataQuery.png)
 
 # User guide
-TODO: Explain how each use-case works by providing step-by-step screenshots for each use-case. This should be based on a tested scenario.
+
+## How-to 1: Generate Routes (UC1)
+
+Step 1: Open the generate route menu by clicking the "generate" button in the bottom-left corner of the map.
+![Open Generate Menu Screenshot](images/how-to/generate1.png)
+
+Step 2: Click on the start marker button to allow you to place the start marker.
+![Click Start Marker Screenshot](images/how-to/generate2.png)
+
+Step 3: Place the start marker in the desired location on the map. This will be where you want your route to begin.
+![Place Start Marker Screenshot](images/how-to/generate3.png)
+
+Step 4: Click on the end marker button to allow you to place the end marker.
+![Click End Marker Screenshot](images/how-to/generate4.png)
+
+Step 5: Place the end marker in the desired location on the map. This will be where you want your route to finish.
+![Place End Marker Screenshot](images/how-to/generate5.png)
+
+Step 6: Click on the generate button in the generate route menu to begin route generation.
+![Begin Generation Screenshot](images/how-to/generate6.png)
+
+Step 7: View the route that has been generated as a line on the map, and plan your next journey!
+![View Generated Route Screenshot](images/how-to/generate7.png)
+
+## How-to 2: View Routes (UC2)
+
+Step 1: Select a route you'd like to view more about. You can see individual routes by hovering over them, and they will
+be highlighted. If there are many routes in one place and they overlap a lot, zoom in to allow the hover functionality to
+make it easier for you to select the one you desire.
+![Select Route](images/how-to/view1.png)
+
+Step 2: Click on the route to open up the view route menu.
+![Click Route](images/how-to/view2.png)
+
+Step 3: Look at the information provided to you and decide whether or not the route is for you!
+![View Route](images/how-to/view3.png)
