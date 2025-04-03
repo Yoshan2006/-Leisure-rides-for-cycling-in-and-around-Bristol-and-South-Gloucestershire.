@@ -153,6 +153,7 @@ is performed on this graph. Finally, the path is returned, if there is a valid p
 *Note that JSLint was configured to the browser environment, all global variables were entered and with settings to allow for loops, the "this" keyword and "complex arrow functions"*.
 
 | **JS File**                    | **JSLint Warnings** |  
+| ---------- | ----------------------------------------------------------- |
 | index.js                       |  0                  |
 | leftSidebar.js                 |  0                  |
 | rightSidebar.js                |  0                  |
