@@ -153,27 +153,18 @@ is performed on this graph. Finally, the path is returned, if there is a valid p
 *Note that JSLint was configured to the browser environment, all global variables were entered and with settings to allow for loops, the "this" keyword and "complex arrow functions"*.
 
 | **JS File**                    | **JSLint Warnings** |  
-| ------------------------------ | ------------------- |
 | index.js                       |  0                  |
-| ------------------------------ | ------------------- |
 | leftSidebar.js                 |  0                  |
-| ------------------------------ | ------------------- |
 | rightSidebar.js                |  0                  |
-| ------------------------------ | ------------------- |
 | warning.js                     |  0                  |
-| ------------------------------ | ------------------- |
 | cycleAPI.js                    |  2                  |
 |                                |  "Expected ; and saw 'of'" at "for (feature of route.features) {" (25:18) |
 |                                |  "Line is longer than 80 characters" at "let url = (the fetch url)" (6:1) |
-| ------------------------------ | ------------------- |
 | mapsAPI.js                     |  2                  |
 |                                |  "Line is longer than 80 characters" at "scriptElement.src = (google maps api link)" (16:1) |
 |                                |  "Line is longer than 80 characters" at "googleMapsObject = new google.maps.Map(document.getElementById("map", mapProperties))" (53:1) |
-| ------------------------------ | ------------------- |
 | drawPolylines.js               |  0                  |
-| ------------------------------ | ------------------- |
 | markers.js                     |  0                  |
-| ------------------------------ | ------------------- |
 | route.js                       |  11                 |
 |                                |  "Expected ; and instead saw 'of'" at "for (path of routeDataJSON.route) {" (30:21) | 
 |                                |  "Expected ; and instead saw 'route'" at "class route {" (6:6) | 
@@ -186,12 +177,9 @@ is performed on this graph. Finally, the path is returned, if there is a valid p
 |                                |  "Line is longer than 80 characters" at "this.highlights = []; //stores the higlights when a polyline is selected" (41:4) | 
 |                                |  "Line is longer than 80 characters" at "polyline.addListener("mouseover", function() { this.parent.highlight(); });" (50:1) |
 |                                |  "Line is longer than 80 characters" at "polyline.addListener("mouseout", function() { this.parent.unhighlight(); });" (51:1) |
-| ------------------------------ | ------------------- |
 | routeMarkers.js                |  0                  |
-| ------------------------------ | ------------------- |
 | mainRoutes.js                  |  1                  |
 |                                |  "Expected ; and instead saw 'of'" at "for (routex of routeArray) {" (6:17) | 
-| ------------------------------ | ------------------- |
 | customRoute.js                 |  11                 |
 |                                |  "Unexpected ')'" at "delete() {" (30:12) |
 |                                |  "Expected ; and instead saw 'customRoute'" at "class customRoute {" (6:6) |
@@ -204,7 +192,6 @@ is performed on this graph. Finally, the path is returned, if there is a valid p
 |                                |  "Naked Block" at "hide() {" (18:12) |
 |                                |  "Expected '; and instead saw {" at "show() {" (24:11) |
 |                                |  "Naked block" at "show() {" (24:21) |
-| ------------------------------ | ------------------- |
 | graph.js                       |  9                  |
 |                                |  "Unexpected expression 'class' in statement position" at "class graphNode {" (3:1) | 
 |                                |  "Expected ; and instead saw 'graphNode'" at "class graphNode {" (3:6) |
@@ -215,7 +202,6 @@ is performed on this graph. Finally, the path is returned, if there is a valid p
 |                                |  "Naked block" at "constructor(LatLngLiteral, route) {" (5:39) |
 |                                |  "Expected ; and instead saw '{'" at "addEdge(connectedNode) {" (14:27) |
 |                                |  "Naked block" at "addEdge(connectedNode) {" (14:28) |
-| ------------------------------ | ------------------- |
 | rect.js                        |  21                 |
 |                                |  "Unexpected expression 'class' in statement position" at "class latlngRect {" (3:1) |
 |                                |  "Expected ; and instead saw 'latlngRect'" at "class latlngRect {" (3:6) |
@@ -238,7 +224,6 @@ is performed on this graph. Finally, the path is returned, if there is a valid p
 |                                |  "Unreachable '{'" at "draw() {" (28:9) |
 |                                |  "Expected ; and instead saw '{'" at "draw() {" (28:11) |
 |                                |  "Naked block" at "draw() {" (28:12) |
-| ------------------------------ | ------------------- |
 | quadtree.js                    |  39                 |
 |                                |  "Unexpected expression 'class' in statement position" at "class quadTree {" (3:1) |
 |                                |  "Expected ; and instead saw 'quadTree'" at "class quadTree {" (3:6) |
@@ -278,15 +263,12 @@ is performed on this graph. Finally, the path is returned, if there is a valid p
 |                                |  "Unreachable '{'" at "draw() {" (67:9) | 
 |                                |  "Expected ; and instead saw '{;" at "draw() {" (67:11) | 
 |                                |  "Naked block" at "draw() {" (67:12) | 
-| ------------------------------ | ------------------- |
 | dijkstra.js                    |  3                  |
 |                                |  "Unexpected 'let'" at "for (let i = 0; i < nextNodes.length; i++) {" (17:18) |
 |                                |  "Line is longer than 80 characters" at "if (!startNode || !endNode) { console.log("Warning: one or more nodes are null"); }" (6:1) |
 |                                |  "Line is longer than 80 characters" at "    let newDistance = currentNode.distance + currentNode.edges[i].weight;" (45:1) |
-| ------------------------------ | ------------------- |
 | closestVertex.js               |  1                  |
 |                                |  "Expected ; and instead saw 'of'" at "for (route of routeArray) {" (7:15) |
-| ------------------------------ | ------------------- |
 | getNodes.js                    |  6                  |
 |                                |  "Unexpected 'let'" at "for (let i = 0; i < mainRouteList.length; i++) {" (12:10) |
 |                                |  "Line is longer than 80 characters" at "    // declared here so that nodes between route are not treated as previous" (17:1) |
@@ -294,16 +276,13 @@ is performed on this graph. Finally, the path is returned, if there is a valid p
 |                                |  "Line is longer than 80 characters" at "    if (vertex.lat == endPos.lat && vertex.lng == endPos.lng) { endNode = node; }" (27:1) |
 |                                |  "Line is longer than 80 characters" at "    if (nearbyNode.route.type != "MultiLineString" && nearbyNode.route.id === node.route.id) { continue; }" (48:1) |
 |                                |  "Line is longer than 80 characters" at "    "if (latlngOffsetToKm(nearbyNode.latlng, node.latlng) < (node.route.type === "MultiLineString" ? validEdgeDistanceMultiLine : validEdgeDistance)) { (49:1) |
-| ------------------------------ | ------------------- |
 | latlngOffsetToKm.js            |  4                  |
 |                                |  "Expected one space between '=' and '2'" at "   2 * earthRadius *" (14:9) |
 |                                |  "Expected one space between '*' and 'Math'" at "Math.asin(Math.sqrt(Math.pow((Math.sin((lat2 - lat1) / 2)), 2) +" (15:9) |
 |                                |  "Expected one space between '+' and 'Math'" at "Math.cos(lat1) * Math.cos(lat2) *" (16:9) |
 |                                |  "Expected one space between '*' and 'Math'" at "Math.pow((Math.sin((lng2 - lng1) / 2)), 2)));" (17:9) |
-| ------------------------------ | ------------------- |
 | generateRoute.js               |  1                  |
 |                                |  "Expected ; and instead saw 'of'" at "for (node of shortestNodePath) {" (33:15) |
-| ------------------------------ | ------------------- |
 
 
 ## Software Architecture
